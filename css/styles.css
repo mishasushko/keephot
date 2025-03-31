@@ -1,11 +1,13 @@
 :root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4A4A4A;
-    --text-color: #333333;
-    --bg-color: #F9F9F9;
+    --primary-color: #FF4081; /* A vibrant pink */
+    --secondary-color: #7B1FA2; /* Deep purple accent */
+    --text-color: #212121; /* Dark grey, almost black */
+    --bg-color: #FAFAFA; /* Light grey background */
     --white-color: #FFFFFF;
+    --accent-color: #00BCD4; /* Turquoise for highlights */
     --section-padding: 80px;
     --transition-duration: 0.4s;
+    --shadow-color: rgba(0, 0, 0, 0.2); /* For shadows */
 }
 
 body {
@@ -14,7 +16,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1;
+    line-height: 1.6; /* Improved readability */
     overflow-x: hidden;
     min-height: 100vh;
 }
@@ -28,7 +30,7 @@ body {
 nav a.active {
     background-color: var(--primary-color);
     color: var(--white-color) !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 7px var(--shadow-color);
 }
 
 a {
@@ -38,30 +40,31 @@ a {
 }
 
 a:hover {
-    color: #E05050;
+    color: #F06292; /* Lighter shade of the vibrant pink */
 }
 
 .section-title {
-    font-size: 2.8rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem; /* Slightly larger */
+    margin-bottom: 3rem; /* Increased spacing */
     position: relative;
     display: inline-block;
     font-weight: 700;
     color: var(--secondary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -12px; /* Slightly lower */
     left: 0;
-    width: 60%;
-    height: 4px;
-    background: var(--primary-color);
-    border-radius: 2px;
+    width: 80%; /* Wider line */
+    height: 6px; /* Thicker line */
+    background: var(--accent-color); /* Use the turquoise accent color */
+    border-radius: 3px; /* Rounder corners */
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1); /* Longer transition */
 }
 
 .section-title.in-view::after {
@@ -71,7 +74,7 @@ a:hover {
 header {
     background-color: var(--white-color);
     padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
     position: sticky;
     top: 0;
     z-index: 100;
@@ -84,13 +87,13 @@ header .container {
 }
 
 .logo img {
-    height: 40px;
-    scale: 2;
+    height: 45px; /* Slightly larger logo */
+    scale: 2.2;
     transition: transform var(--transition-duration) ease-in-out;
 }
 
 .logo:hover img {
-    transform: rotate(-10deg) scale(1.1);
+    transform: rotate(-12deg) scale(1.15); /* More pronounced rotation and scale */
 }
 
 nav ul {
@@ -101,20 +104,21 @@ nav ul {
 }
 
 nav li {
-    margin-left: 25px;
+    margin-left: 30px; /* Increased spacing */
 }
 
 nav a {
     color: var(--secondary-color);
     font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+    padding: 10px 15px; /* Slightly larger padding */
+    border-radius: 8px; /* More rounded corners */
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease; /* Add transform transition */
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.08); /* Slightly darker hover */
     color: var(--primary-color);
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .language-selector {
@@ -122,28 +126,29 @@ nav a:hover {
 }
 
 .language-selector select {
-    padding: 8px 25px;
-    border: none;
-    border-radius: 8px;
+    padding: 10px 30px; /* Increased padding */
+    border: 2px solid var(--secondary-color); /* Add a border */
+    border-radius: 10px; /* More rounded */
     appearance: none;
-    background-color: var(--bg-color);
+    background-color: var(--white-color); /* White background for contrast */
     color: var(--text-color);
     cursor: pointer;
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease;
-    font-size: 14px;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, border-color var(--transition-duration) ease; /* Added border-color transition */
+    font-size: 15px; /* Slightly larger font */
     font-weight: 500;
     outline: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%237B1FA2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 16px 16px;
+    background-position: right 12px center; /* Adjust position */
+    background-size: 18px 18px; /* Slightly larger icon */
 }
 
 .language-selector select:hover,
 .language-selector select:focus {
     background-color: var(--primary-color);
     color: var(--white-color);
-    transform: scale(1.05);
+    transform: scale(1.08); /* Increased scale on hover */
+    border-color: var(--primary-color); /* Change border color on hover */
 }
 
 .language-selector select:hover {
@@ -161,9 +166,10 @@ nav a:hover {
     background-position: center;
     color: var(--white-color);
     text-align: center;
-    padding: 350px 0;
+    padding: 450px 0;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
 }
 
 .hero::before {
@@ -173,7 +179,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
     z-index: 0;
 }
 
@@ -183,34 +189,38 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    font-weight: 600;
+    font-size: 5em; /* Larger heading */
+    margin-bottom: 25px;
+    font-weight: 700; /* Bolder font */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Deeper text shadow */
     animation: fadeInUp 1s ease-out;
 }
 
 .hero p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    font-weight: 300;
+    font-size: 1.5em; /* Larger paragraph */
+    margin-bottom: 45px;
+    font-weight: 400; /* Slightly bolder */
     animation: fadeInUp 1.3s ease-out;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Slight text shadow */
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 15px 35px; /* Larger button */
     background-color: var(--primary-color);
     color: var(--white-color);
-    border-radius: 8px;
-    font-weight: 500;
+    border-radius: 10px; /* More rounded button */
+    font-weight: 600; /* Bolder font */
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Stronger shadow */
     animation: fadeInUp 1.6s ease-out;
+    text-transform: uppercase; /* Uppercase button text */
+    letter-spacing: 1px; /* Slightly increased letter spacing */
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* More pronounced lift */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
 }
 
 .history {
@@ -221,29 +231,33 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 20px; /* Increased padding */
 }
 
 .history-content {
-    max-width: 800px;
+    max-width: 900px; /* Wider content area */
     text-align: center;
     animation: fadeIn 1.2s ease-in-out;
 }
 
 .history-content h2 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
-    font-weight: 600;
+    font-size: 4em; /* Larger heading */
+    margin-bottom: 35px;
+    font-weight: 700; /* Bolder font */
+    color: var(--primary-color); /* Primary color heading */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
 }
 
 .history-content p {
     color: var(--secondary-color);
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-size: 1.5em;
+    line-height: 1.9; /* Improved line height */
+    margin-bottom: 35px;
+    font-size: 1.6em; /* Larger font size */
 }
 
 .about {
     background-color: var(--bg-color);
+    padding: 100px 0;
 }
 
 .about .container {
@@ -253,31 +267,34 @@ nav a:hover {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 900px;
     text-align: center;
 }
 
 .about-content h2 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
-    font-weight: 600;
+    font-size: 4em;
+    margin-bottom: 35px;
+    font-weight: 700;
+    color: var(--primary-color); /* Primary color heading */
     animation: slideInLeft 1s ease-in-out;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
 }
 
 .about-content p {
     color: var(--secondary-color);
-    line-height: 1.8;
-    font-size: 1.5em;
-    margin-bottom: 30px;
+    line-height: 1.9;
+    font-size: 1.6em;
+    margin-bottom: 35px;
     animation: slideInRight 1.2s ease-in-out;
 }
 
 .about-logo {
-    max-width: 600px;
+    max-width: 700px; /* Larger logo */
     display: block;
-    margin: 140px auto;
-    scale: 1.3;
+    margin: 160px auto;
+    scale: 1.5; /* Increased scale */
     animation: zoomIn 1s ease-in-out;
+    border-radius: 15px; /* Round the corners */
 }
 
 .contact {
@@ -286,45 +303,47 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     animation: zoomIn 1s ease-in-out;
-    padding: 200px;
+    padding: 220px; /* Increased padding */
+    border-radius: 20px; /* Round the corners */
 }
 
 .contact h2 {
-    font-size: 3.5em;
-    margin-bottom: 40px;
-    font-weight: 600;
+    font-size: 6em;
+    margin-bottom: 45px;
+    font-weight: 700;
+    color: var(--primary-color); /* Primary color heading */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
 }
 
 .contact p {
     color: var(--secondary-color);
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1.6em;
+    margin-bottom: 25px;
 }
 
 .contact::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 400% 400%;
-    z-index: -1;
-    animation: animateBackground 15s ease infinite;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: animateBackground 15s ease infinite;
+  opacity: 0.7; /* Make the background less intense */
 }
 
 @keyframes animateBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes fadeInUp {
@@ -406,13 +425,14 @@ nav a:hover {
     }
 
     .hero h1 {
-        font-size: 3em;
+        font-size: 4em;
     }
 }
 
 /* Catalog Styles */
 .catalog {
     background-color: var(--bg-color);
+    padding: 80px 0;
 }
 
 .catalog .container {
@@ -420,23 +440,25 @@ nav a:hover {
 }
 
 .catalog h2 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
+    font-size: 4em; /* Larger heading */
+    margin-bottom: 35px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--primary-color); /* Primary color heading */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
 }
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider items */
+    gap: 25px;
 }
 
 .catalog-item {
     background-color: var(--white-color);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px; /* More rounded corners */
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Stronger shadow */
     text-align: center;
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -444,27 +466,34 @@ nav a:hover {
     flex-direction: column;
 }
 
+.catalog-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
 .catalog-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Round image corners */
 }
 
 .catalog-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    font-weight: 500;
+    font-size: 1.7em; /* Larger heading */
+    margin-bottom: 12px;
+    font-weight: 600; /* Bolder font */
+    color: var(--secondary-color);
 }
 
 .catalog-item p {
     color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-size: 2.5em;
+    margin-bottom: 18px;
+    font-size: 1.1em;
 }
 
 .catalog-item .price {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.5em; /* Larger price */
+    font-weight: 700; /* Bolder font */
     color: var(--primary-color);
     order: 2;
     margin-top: auto;
@@ -472,17 +501,18 @@ nav a:hover {
 
 .catalog-item .btn {
     display: inline-block;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-weight: 500;
-    box-shadow: none;
+    padding: 10px 25px;
+    border-radius: 8px; /* More rounded button */
+    font-size: 1em; /* Slightly larger font */
+    font-weight: 600; /* Bolder font */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
     order: 3;
+    background-color: var(--accent-color); /* Use accent color for the button */
 }
 
 .catalog-item .btn:hover {
-    transform: none;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
 
 @media (max-width: 768px) {
@@ -492,27 +522,35 @@ nav a:hover {
 }
 
 .category-filter {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .category-filter button {
-    padding: 10px 20px;
-    margin: 0 5px;
-    border: 1px solid #ccc;
-    background-color: #f0f0f0;
+    padding: 12px 25px;
+    margin: 0 8px;
+    border: none; /* Remove default border */
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
     cursor: pointer;
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease; /* Added shadow */
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
 }
 
 .category-filter button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: var(--primary-color);
-    transform: translateY(-1px);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .category-filter button.active {
-    background-color: #ddd;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item {

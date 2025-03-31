@@ -17,24 +17,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Keep Hot" />
     <link rel="manifest" href="/site.webmanifest" />
-    <style>
-        /* Style for the language selector */
-        .language-selector {
-            display: flex;
-            gap: 10px;
-        }
-
-        .language-button {
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            background-color: #f0f0f0;
-            cursor: pointer;
-        }
-
-        .language-button.active {
-            background-color: #ddd;
-        }
-    </style>
 </head>
 
 <body>
@@ -66,12 +48,6 @@
     </section>
 
     <div class="section-divider"></div>
-     <footer>
-        <div class="container">
-            <p data-translate="footer_rights">© 2025 Keep Hot. Все права защищены.</p>
-        </div>
-    </footer>
-
     <script>
         const langButtons = document.querySelectorAll('.language-button');
         let currentLanguage = 'ru'; // Default language
