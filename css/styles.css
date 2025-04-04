@@ -86,14 +86,63 @@ header .container {
     align-items: center;
 }
 
+.logo {
+    --transition-duration: 0.4s;
+    --flame-color: #ff6d00;
+    position: relative;
+    display: inline-block;
+}
+
 .logo img {
     height: 45px;
     scale: 2.2;
     transition: transform var(--transition-duration) ease-in-out;
+    transform-origin: center;
+    position: relative;
+    z-index: 1;
 }
 
 .logo:hover img {
-    transform: rotate(-12deg) scale(1.15);
+    animation: single-flame 2s ease-in-out infinite alternate;
+}
+
+@keyframes single-flame {
+    0% {
+        filter: drop-shadow(0 0 10px var(--flame-color));
+        opacity: 1;
+    }
+    50% {
+        filter: drop-shadow(0 0 20px var(--flame-color));
+        opacity: 0.9;
+    }
+    100% {
+        filter: drop-shadow(0 0 15px var(--flame-color));
+        opacity: 1;
+    }
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--flame-color), transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+    z-index: 0;
+}
+
+.logo:hover::after {
+    opacity: 0.6;
+    animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0%, 100% { transform: scale(1.4); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.4; }
 }
 
 nav ul {
