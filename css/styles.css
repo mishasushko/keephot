@@ -406,9 +406,7 @@ nav a:hover {
     }
 }
 
-/*  Media Queries для адаптивности */
 @media (max-width: 768px) {
-    /* Общие настройки для маленьких экранов */
     .container {
         padding: 10px;
     }
@@ -418,19 +416,18 @@ nav a:hover {
         margin-bottom: 2rem;
     }
 
-    /* Header */
     header .container {
         flex-direction: column;
-        align-items: center; /* Центрирование элементов */
+        align-items: center;
     }
 
     .logo {
-        margin-bottom: 10px; /* Отступ логотипа сверху */
+        margin-bottom: 10px;
     }
 
     nav ul {
         flex-direction: column;
-        align-items: center; /* Центрирование пунктов меню */
+        align-items: center;
     }
 
     nav li {
@@ -439,11 +436,10 @@ nav a:hover {
     }
 
     nav a {
-        padding: 8px 12px; /* Уменьшаем отступы ссылок */
+        padding: 8px 12px;
     }
-    /* Hero Section */
     .hero {
-        padding: 200px 0; /*  меньше отступы */
+        padding: 200px 0;
     }
 
     .hero h1 {
@@ -456,7 +452,6 @@ nav a:hover {
         margin-bottom: 30px;
     }
 
-    /* History Section */
     .history .container,
     .about .container {
         padding: 60px 15px;
@@ -478,9 +473,8 @@ nav a:hover {
         scale: 1.2;
     }
 
-    /* Contact Section */
     .contact {
-        padding: 100px 20px; /* уменьшаем отступы */
+        padding: 100px 20px;
         border-radius: 10px;
     }
 
@@ -492,7 +486,6 @@ nav a:hover {
     .contact p {
         font-size: 1.2em;
     }
-    /* Catalog Section */
     .catalog {
         padding: 60px 0;
     }
@@ -507,12 +500,12 @@ nav a:hover {
     }
 
     .catalog-grid {
-        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .catalog-item {
-        padding: 5px;
+        padding: 20px;
     }
 
     .catalog-item h3 {
@@ -534,7 +527,6 @@ nav a:hover {
     }
 }
 
-/* Для очень маленьких экранов (телефоны) */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2.5em;
@@ -653,9 +645,9 @@ nav a:hover {
 }
 
 .catalog-item.hidden {
-    opacity: 0;  /* Полностью прозрачный */
-    transform: translateY(20px); /* Немного смещен вниз */
-    pointer-events: none; /*  Элемент не реагирует на клики */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
     display: none;
 
 }
@@ -663,7 +655,7 @@ nav a:hover {
 .catalog-item.show {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto; /* Возвращаем обработку кликов */
+    pointer-events: auto;
     display: flex;
 }
 
