@@ -303,27 +303,33 @@
     <div class="section-divider"></div>
 
     <script>
-        const categoryButtons = document.querySelectorAll('.category-button');
-        const catalogItems = document.querySelectorAll('.catalog-item');
+const categoryButtons = document.querySelectorAll('.category-button');
+const catalogItems = document.querySelectorAll('.catalog-item');
 
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Deactivate all buttons
-                categoryButtons.forEach(btn => btn.classList.remove('active'));
-                // Activate the clicked button
-                button.classList.add('active');
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Deactivate all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        // Activate the clicked button
+        button.classList.add('active');
 
-                const category = button.dataset.category;
+        const category = button.dataset.category;
 
-                catalogItems.forEach(item => {
-                    item.classList.remove('show'); // Hide all items
+        catalogItems.forEach(item => {
+            item.classList.remove('show');
+            item.classList.add('hidden');
+        });
 
-                    if (category === 'all' || item.dataset.category === category) {
-                        item.classList.add('show'); // Show items in the selected category
-                    }
-                });
+        requestAnimationFrame(() => {
+            catalogItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.classList.remove('hidden');
+                    item.classList.add('show');
+                }
             });
         });
+    });
+});
     </script>
 
 </body>
