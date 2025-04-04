@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #ff0055; /* A vibrant pink */
-    --secondary-color: #000000; /* Deep purple accent */
-    --text-color: #212121; /* Dark grey, almost black */
-    --bg-color: #FAFAFA; /* Light grey background */
-    --white-color: #FFFFFF;
-    --accent-color: #000000; /* Turquoise for highlights */
+    --primary-color: #ff0055;
+    --secondary-color: #000000;
+    --text-color: #000000;
+    --bg-color: #FAFAFA;
+    --white-color: #ffffff;
+    --accent-color: #000000;
     --section-padding: 80px;
     --transition-duration: 0.4s;
-    --shadow-color: rgba(0, 0, 0, 0.2); /* For shadows */
+    --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     padding: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
 }
@@ -44,27 +44,27 @@ a:hover {
 }
 
 .section-title {
-    font-size: 3.2rem; /* Slightly larger */
-    margin-bottom: 3rem; /* Increased spacing */
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
     position: relative;
     display: inline-block;
     font-weight: 700;
     color: var(--secondary-color);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -12px; /* Slightly lower */
+    bottom: -12px;
     left: 0;
-    width: 80%; /* Wider line */
-    height: 6px; /* Thicker line */
-    background: var(--accent-color); /* Use the turquoise accent color */
-    border-radius: 3px; /* Rounder corners */
+    width: 80%;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 3px;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1); /* Longer transition */
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .section-title.in-view::after {
@@ -74,7 +74,7 @@ a:hover {
 header {
     background-color: #6b6b6b;
     padding: 20px 0;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -87,13 +87,13 @@ header .container {
 }
 
 .logo img {
-    height: 45px; /* Slightly larger logo */
+    height: 45px;
     scale: 2.2;
     transition: transform var(--transition-duration) ease-in-out;
 }
 
 .logo:hover img {
-    transform: rotate(-12deg) scale(1.15); /* More pronounced rotation and scale */
+    transform: rotate(-12deg) scale(1.15);
 }
 
 nav ul {
@@ -104,21 +104,21 @@ nav ul {
 }
 
 nav li {
-    margin-left: 30px; /* Increased spacing */
+    margin-left: 30px;
 }
 
 nav a {
     color: var(--secondary-color);
     font-weight: 500;
-    padding: 10px 15px; /* Slightly larger padding */
-    border-radius: 8px; /* More rounded corners */
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease; /* Add transform transition */
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease;
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.08); /* Slightly darker hover */
+    background-color: rgba(0, 0, 0, 0.08);
     color: var(--primary-color);
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
 }
 
 .language-selector {
@@ -126,29 +126,29 @@ nav a:hover {
 }
 
 .language-selector select {
-    padding: 10px 30px; /* Increased padding */
-    border: 2px solid var(--secondary-color); /* Add a border */
-    border-radius: 10px; /* More rounded */
+    padding: 10px 30px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
     appearance: none;
-    background-color: var(--white-color); /* White background for contrast */
+    background-color: var(--white-color);
     color: var(--text-color);
     cursor: pointer;
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, border-color var(--transition-duration) ease; /* Added border-color transition */
-    font-size: 15px; /* Slightly larger font */
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, border-color var(--transition-duration) ease;
+    font-size: 15px;
     font-weight: 500;
     outline: none;
     background-image: url('data:image/svg+xml;utf8,<svg fill="%237B1FA2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
-    background-position: right 12px center; /* Adjust position */
-    background-size: 18px 18px; /* Slightly larger icon */
+    background-position: right 12px center;
+    background-size: 18px 18px;
 }
 
 .language-selector select:hover,
 .language-selector select:focus {
     background-color: var(--primary-color);
     color: var(--white-color);
-    transform: scale(1.08); /* Increased scale on hover */
-    border-color: var(--primary-color); /* Change border color on hover */
+    transform: scale(1.08);
+    border-color: var(--primary-color);
 }
 
 .language-selector select:hover {
@@ -161,7 +161,6 @@ nav a:hover {
 }
 
 .hero {
-    background-image: url('https://images.unsplash.com/photo-1586955340558-99861a38c289?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
     background-size: cover;
     background-position: center;
     color: var(--white-color);
@@ -169,7 +168,7 @@ nav a:hover {
     padding: 450px 0;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero::before {
@@ -179,7 +178,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
@@ -189,38 +188,38 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 5em; /* Larger heading */
+    font-size: 5em;
     margin-bottom: 25px;
-    font-weight: 700; /* Bolder font */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Deeper text shadow */
-    animation: fadeInUp 1s ease-out;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: slideInLeft 1s ease-in-out;
 }
 
 .hero p {
-    font-size: 1.5em; /* Larger paragraph */
+    font-size: 1.5em;
     margin-bottom: 45px;
-    font-weight: 400; /* Slightly bolder */
-    animation: fadeInUp 1.3s ease-out;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Slight text shadow */
+    font-weight: 400;
+    animation: slideInRight 1.2s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 35px; /* Larger button */
+    padding: 15px 35px;
     background-color: var(--primary-color);
     color: var(--white-color);
-    border-radius: 10px; /* More rounded button */
-    font-weight: 600; /* Bolder font */
+    border-radius: 10px;
+    font-weight: 600;
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     animation: fadeInUp 1.6s ease-out;
-    text-transform: uppercase; /* Uppercase button text */
-    letter-spacing: 1px; /* Slightly increased letter spacing */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
-    transform: translateY(-5px); /* More pronounced lift */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .history {
@@ -231,28 +230,30 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px; /* Increased padding */
+    padding: 100px 20px;
 }
 
 .history-content {
-    max-width: 900px; /* Wider content area */
+    max-width: 900px;
     text-align: center;
-    animation: fadeIn 1.2s ease-in-out;
 }
 
 .history-content h2 {
-    font-size: 4em; /* Larger heading */
+    font-size: 4em;
     margin-bottom: 35px;
-    font-weight: 700; /* Bolder font */
-    color: var(--primary-color); /* Primary color heading */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    animation: slideInLeft 1s ease-in-out;
+
 }
 
 .history-content p {
     color: var(--secondary-color);
-    line-height: 1.9; /* Improved line height */
+    line-height: 1.9;
     margin-bottom: 35px;
-    font-size: 1.6em; /* Larger font size */
+    font-size: 1.6em;
+    animation: slideInRight 1.2s ease-in-out;
 }
 
 .about {
@@ -275,9 +276,9 @@ nav a:hover {
     font-size: 4em;
     margin-bottom: 35px;
     font-weight: 700;
-    color: var(--primary-color); /* Primary color heading */
+    color: var(--primary-color);
     animation: slideInLeft 1s ease-in-out;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .about-content p {
@@ -289,12 +290,12 @@ nav a:hover {
 }
 
 .about-logo {
-    max-width: 700px; /* Larger logo */
+    max-width: 700px;
     display: block;
     margin: 160px auto;
-    scale: 1.5; /* Increased scale */
+    scale: 1.5;
     animation: zoomIn 1s ease-in-out;
-    border-radius: 15px; /* Round the corners */
+    border-radius: 15px;
 }
 
 .contact {
@@ -302,23 +303,24 @@ nav a:hover {
     background-color: var(--white-color);
     position: relative;
     overflow: hidden;
-    animation: zoomIn 1s ease-in-out;
-    padding: 220px; /* Increased padding */
-    border-radius: 20px; /* Round the corners */
+    padding: 220px;
+    border-radius: 20px;
 }
 
 .contact h2 {
     font-size: 6em;
     margin-bottom: 45px;
     font-weight: 700;
-    color: var(--primary-color); /* Primary color heading */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    animation: slideInLeft 1s ease-in-out;
 }
 
 .contact p {
     color: var(--secondary-color);
     font-size: 1.6em;
     margin-bottom: 25px;
+    animation: slideInRight 1.2s ease-in-out;
 }
 
 .contact::before {
@@ -331,7 +333,7 @@ nav a:hover {
   background-size: 400% 400%;
   z-index: -1;
   animation: animateBackground 15s ease infinite;
-  opacity: 0.7; /* Make the background less intense */
+  opacity: 0.7;
 }
 
 @keyframes animateBackground {
@@ -426,13 +428,14 @@ nav a:hover {
 
     .hero h1 {
         font-size: 4em;
+        
     }
 }
 
-/* Catalog Styles */
 .catalog {
     background-color: var(--bg-color);
     padding: 80px 0;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
 .catalog .container {
@@ -440,17 +443,17 @@ nav a:hover {
 }
 
 .catalog h2 {
-    font-size: 4em; /* Larger heading */
+    font-size: 4em;
     margin-bottom: 35px;
     text-align: center;
     font-weight: 700;
-    color: var(--primary-color); /* Primary color heading */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Slight shadow */
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider items */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -462,9 +465,10 @@ nav a:hover {
     text-align: center;
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex; /* Change to flex */
+    display: flex;
     flex-direction: column;
     height: 100%;
+    animation: zoomIn 0.8s ease-in-out;
 }
 
 .catalog-item img {
@@ -486,16 +490,16 @@ nav a:hover {
     color: var(--secondary-color);
     font-size: 1.1em;
     flex: 1;
-    min-height: 1%;  
+    min-height: 1%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: flex-end;
 
 }
 
 .catalog-item .price {
-    font-size: 1.5em; /* Larger price */
-    font-weight: 700; /* Bolder font */
+    font-size: 1.5em;
+    font-weight: 700;
     color: var(--primary-color);
     order: 2;
     margin-top: auto;
@@ -504,17 +508,32 @@ nav a:hover {
 .catalog-item .btn {
     display: inline-block;
     padding: 10px 25px;
-    border-radius: 8px; /* More rounded button */
-    font-size: 1em; /* Slightly larger font */
-    font-weight: 600; /* Bolder font */
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
     order: 3;
-    background-color: var(--accent-color); /* Use accent color for the button */
+    background-color: var(--accent-color);
 }
 
 .catalog-item .btn:hover {
-    transform: translateY(-2px); /* Slight lift on hover */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-item.hidden {
+    opacity: 0;  /* Полностью прозрачный */
+    transform: translateY(20px); /* Немного смещен вниз */
+    pointer-events: none; /*  Элемент не реагирует на клики */
+    display: none;
+
+}
+
+.catalog-item.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; /* Возвращаем обработку кликов */
+    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -526,17 +545,18 @@ nav a:hover {
 .category-filter {
     margin-bottom: 30px;
     text-align: center;
+    animation: slideInLeft 1s ease-in-out;
 }
 
 .category-filter button {
     padding: 12px 25px;
     margin: 0 8px;
-    border: none; /* Remove default border */
+    border: none;
     border-radius: 8px;
     background-color: var(--bg-color);
     color: var(--secondary-color);
     cursor: pointer;
-    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease; /* Added shadow */
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     font-size: 1em;
     font-weight: 500;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.08);
@@ -557,15 +577,6 @@ nav a:hover {
 
 .catalog-item {
     display: none;
-}
-
-.catalog-item.thermos,
-.catalog-item.thermomug,
-.catalog-item.thermobottle,
-.catalog-item.foodthermos,
-.catalog-item.giftmug,
-.catalog-item.sunglasses {
-
 }
 
 .catalog-item.show {
