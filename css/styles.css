@@ -406,29 +406,160 @@ nav a:hover {
     }
 }
 
-@media (max-width: 992px) {
+/*  Media Queries для адаптивности */
+@media (max-width: 768px) {
+    /* Общие настройки для маленьких экранов */
     .container {
-        padding: 15px;
+        padding: 10px;
     }
 
+    .section-title {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Header */
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Центрирование элементов */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Отступ логотипа сверху */
     }
 
     nav ul {
-        margin-top: 15px;
         flex-direction: column;
+        align-items: center; /* Центрирование пунктов меню */
     }
 
     nav li {
         margin-left: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px; /* Уменьшаем отступы ссылок */
+    }
+    /* Hero Section */
+    .hero {
+        padding: 200px 0; /*  меньше отступы */
     }
 
     .hero h1 {
-        font-size: 4em;
-        
+        font-size: 3em;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    /* History Section */
+    .history .container,
+    .about .container {
+        padding: 60px 15px;
+    }
+
+    .history-content h2,
+    .about-content h2 {
+        font-size: 3em;
+    }
+
+    .history-content p,
+    .about-content p {
+        font-size: 1.2em;
+        line-height: 1.7;
+    }
+
+    .about-logo {
+        margin: 80px auto;
+        scale: 1.2;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 100px 20px; /* уменьшаем отступы */
+        border-radius: 10px;
+    }
+
+    .contact h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .contact p {
+        font-size: 1.2em;
+    }
+    /* Catalog Section */
+    .catalog {
+        padding: 60px 0;
+    }
+
+    .catalog .container {
+        padding: 20px;
+    }
+
+    .catalog h2 {
+        font-size: 3em;
+        margin-bottom: 25px;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr; /* Один столбец на мобильных устройствах */
+        gap: 20px;
+    }
+
+    .catalog-item {
+        padding: 20px;
+    }
+
+    .catalog-item h3 {
+        font-size: 1.5em;
+    }
+
+    .catalog-item p {
+        font-size: 1em;
+    }
+
+    .catalog-item .price {
+        font-size: 1.3em;
+    }
+
+    .category-filter button {
+        padding: 10px 20px;
+        margin: 0 5px;
+        font-size: 0.9em;
+    }
+}
+
+/* Для очень маленьких экранов (телефоны) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .history-content h2,
+    .about-content h2 {
+        font-size: 2.5em;
+    }
+
+    .history-content p,
+    .about-content p {
+        font-size: 1.1em;
+    }
+
+    .contact h2 {
+        font-size: 2.5em;
+    }
+
+    .contact p {
+        font-size: 1.1em;
     }
 }
 
@@ -460,7 +591,7 @@ nav a:hover {
 .catalog-item {
     background-color: var(--white-color);
     border-radius: 12px;
-    padding: 25px;
+    padding: 5px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
