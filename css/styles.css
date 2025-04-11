@@ -729,13 +729,12 @@ nav a:hover {
         font-size: 0.9em;
     }
 
-    /* Specific catalog adjustments */
     .catalog h2 {
         font-size: 3em;
     }
 
     .catalog-grid {
-        grid-template-columns: 1fr; /* Stack items on small screens */
+        grid-template-columns: 1fr;
     }
 
     .catalog-item h3 {
@@ -755,7 +754,7 @@ nav a:hover {
     }
 
     .hero {
-        padding: 150px 0; /* Adjust hero padding */
+        padding: 150px 0;
     }
 
     .contact {
@@ -766,7 +765,6 @@ nav a:hover {
         font-size: 2.5em;
     }
 
-    /* Language Selector adjustments */
     .language-selector select {
         padding: 8px 20px;
         font-size: 14px;
